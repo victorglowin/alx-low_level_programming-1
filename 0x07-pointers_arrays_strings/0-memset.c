@@ -1,20 +1,21 @@
 #include "main.h"
 
 /**
- * _memset - ironnou
- * @s: pointer to char params
- * @b: data to change
- * @n: index
- * Return: *s
+ * *_memset - fill a block of memory with a particular value
+ * @s: pointer
+ * @b: constant byte
+ * @n: number of bytes of memory
+ * Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int j;
 
-	for (i = 0; i < n; i++)
+	for (j = 0; n > 0; j++, n--)
 	{
-		s[i] = b;
+		s[j] = b;
 	}
+
 	return (s);
 }

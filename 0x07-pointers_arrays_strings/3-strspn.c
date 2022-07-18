@@ -1,32 +1,35 @@
 #include "main.h"
 
 /**
- * _strspn - search a string for a set of bytes 
- * @s: source string
- * @accept: accepted string
- * 
- * Return: number of bytes in the int segment
+ * _strspn - gets the length of the initial substring
+ * @s: string to be scanned
+ * @accept: the initial segment to be calculated
+ *
+ * Return: return the number of bytes in the intital segment of s
+ *         which only consist only of bytes from accept
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-    unsigned int a = 0, b, t = 0;
+	unsigned int bytes = 0;
+	int x;
 
-    while (accept[a])
-    {
-        b = 0;
+	while (*s)
+	{
+		for (x = 0; accept[x]; x++)
+		{
+			if (*s == accept[x])
+			{
+				bytes++;
+				break;
+			}
 
-        while (s[b] != 32)
-        {
-            if (accept[a] ==s[b]) 
-            {
-                t++;
-            }
+			else if (accept[x + 1] == '\0')
+				return (bytes);
+		}
 
-            b++;
-        }
+		s++;
+	}
 
-        a++;
-    }
-
-    return (t);
+	return (bytes);
 }
