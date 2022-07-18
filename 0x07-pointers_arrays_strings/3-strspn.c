@@ -5,7 +5,8 @@
  * @s: string to be scanned
  * @accept: the initial segment to be calculated
  *
- * Return: return the number of bytes in the intital segment of which only consist only of bytes from accept
+ * Return: return the number of bytes in the intital segment of s
+ *         which only consist only of bytes from accept
  */
 
 unsigned int _strspn(char *s, char *accept)
