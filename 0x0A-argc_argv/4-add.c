@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 				if (isdigit(*(ptr + j)) == 0)
 				{
 					printf("Error\n");
-                    					return (1);
+					return (1);
 				}
 			}
 			sum += atoi(argv[i]);
